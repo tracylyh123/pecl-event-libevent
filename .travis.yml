@@ -2,10 +2,12 @@
 sudo: false
 language: c
 
+before_install:
+ - phpenv global 7.0
+
 addons:
  apt:
   packages:
-   - php7.0-cli
    - php-pear
 
 env:
@@ -16,7 +18,6 @@ env:
   - PHP=7.0 enable_debug=yes enable_maintainer_zts=yes with_openssl=yes
 
 before_script:
- - curl -Ss http://us1.php.net/distributions//php-7.0.0.tar.bz2 | tar xj -C travis/pecl/
  - make -f travis/pecl/Makefile php
  - make -f travis/pecl/Makefile ext PECL=libevent
 
