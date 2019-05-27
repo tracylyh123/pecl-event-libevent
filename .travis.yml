@@ -2,12 +2,11 @@
 sudo: false
 language: c
 
-dist: xenial
-
+before_install:
+ - curl -SsL http://us1.php.net/distributions//php-7.0.0.tar.bz2 | tar xj -C travis/pecl/;
 addons:
  apt:
   packages:
-   - php7.0-cli
    - php-pear
 
 env:
