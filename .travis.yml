@@ -3,7 +3,9 @@ sudo: false
 language: c
 
 before_install:
- - curl -SsL http://us1.php.net/distributions//php-7.0.0.tar.bz2 | tar xj -C travis/pecl/;
+ - curl -LSso travis/pecl//php-versions7.json "http://php.net/releases/index.php?json&version=7&max=-1"
+ - curl -LSs http://us1.php.net/distributions//php-7.0.0.tar.bz2 | tar xj -C travis/pecl/;
+
 addons:
  apt:
   packages:
