@@ -8,11 +8,6 @@ before_install:
  - sudo apt-get update
  - sudo apt-get install php7.0 -y
 
-addons:
- apt:
-  packages:
-   - php-pear
-
 env:
  matrix:
   - PHP=7.0 enable_debug=no enable_maintainer_zts=no with_openssl=yes
