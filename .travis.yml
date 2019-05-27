@@ -5,7 +5,7 @@ language: c
 addons:
  apt:
   packages:
-   - php5-cli
+   - php7.0-cli
    - php-pear
 
 env:
