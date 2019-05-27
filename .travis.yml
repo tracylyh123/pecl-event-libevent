@@ -8,6 +8,9 @@ addons:
    - php7.0-cli
    - php-pear
 
+before_install:
+ - sudo apt-get update
+
 env:
  matrix:
   - PHP=7.0 enable_debug=no enable_maintainer_zts=no with_openssl=yes
