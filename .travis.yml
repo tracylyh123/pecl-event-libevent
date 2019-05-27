@@ -2,7 +2,7 @@ language: php
 
 php:
  - 7.0
- - 7.0-nts
+ - 7.0-zts
 
 before_script:
  - sudo apt-get install -y libevent-dev
