@@ -2,13 +2,12 @@
 sudo: false
 language: c
 
-before_install:
-  - sudo apt-get update
+dist: xenial
 
 addons:
  apt:
   packages:
-   - php5-cli
+   - php7.0-cli
    - php-pear
 
 env:
